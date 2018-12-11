@@ -19,7 +19,7 @@ testA20:
 	call print_hex
 	cmp ax, dx ;compare the segment and reference
 
-	je .cont ;if the seg. and ref. are =, go to .cont
+	je .cont ;if the segment and reference are equal, go to .cont
 	popa ;else, pop all of the stack
 	mov ax, 1 ;signal that the reference and segment aren't equal
 	ret
@@ -51,7 +51,7 @@ testA20:
 		xor ax, ax
 		ret
 
-;shit...we have to use algebra in real life! ;-;
+;darn...we have to use algebra in real life! :(
 ;FORMULA FOR SEGMENTATION: S * 16 + O, where S = the segment, and O is the offset
 ;0xFFFF x 16 = 0xFFFF0 
 ;O is the unknown...
