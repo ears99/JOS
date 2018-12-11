@@ -54,7 +54,8 @@ main:
 		TEST_STR: db 'You are in the second sector.', 0xA, 0xD, 0
 		NO_A20: db 'No A20 line.', 0xA, 0xD, 0
 		YES_LM: db 'Long mode support.', 0xA, 0xD, 0
-	
+		NO_LM: db 'No long mode support.', 0xA, 0xD, 0
+		
 	;padding and magic number
 	times 510 - ($-$$) db 0 ;pads the rest of the boot sector (minus the segment of code we've written)
 	dw 0xAA55 ;magic number
