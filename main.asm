@@ -6,8 +6,6 @@
 section .text
 global main
 main:
-	mov si, LOADING
-	call print_str
 
 ;reset segment registers and set stack pointer to entry point
 	cli ;clear interrupts
@@ -31,8 +29,6 @@ main:
 		int 0x13
 
 		;loads sectors from the disk
-		mov al, 1
-		mov cl, 2
 		call read_disk 
 
 		;mov ax, 0x2400
@@ -54,11 +50,9 @@ main:
 		%include "./testA20.asm"
 		%include "./enableA20.asm"
 
-		LOADING: db 'Loading...', 0xA, 0xD
 		DISK_ERR_MSG: db 'Error Loading Disk.', 0xA, 0xD, 0
 		TEST_STR: db 'You are in the second sector.', 0xA, 0xD, 0
 		NO_A20: db 'No A20 line.', 0xA, 0xD, 0
-		NO_LM: db 'No long mode support.', 0xA, 0xD, 0
 		YES_LM: db 'Long mode support.', 0xA, 0xD, 0
 	
 	;padding and magic number
