@@ -10,3 +10,4 @@ You'll need QEmu, a free emulator for all kinds of processor architechtures. JOS
 
 # My computer isn't x86-64! How can I run JOS? 
 I plan to learn how to make an x86 version of JOS, don't worry. Updates to that will be made in another repository called JOS32.
+(Assuming I can even find x86 resources online anymore...)
