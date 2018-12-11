@@ -68,6 +68,4 @@ main:
 
 		jmp $
 
-	
-
 		times 512 db 0 ;extra padding so QEmu doesn't think we've ran out of disk space
