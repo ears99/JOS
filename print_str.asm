@@ -14,3 +14,5 @@ print_str:
 		int 0x10 
 		add si, 1 ;move to the next char in the string.
 		jmp str_loop
+
+;trying to create an x86 version of this...currently not having a lot of success...
